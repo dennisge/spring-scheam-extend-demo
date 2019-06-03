@@ -1,2 +1,3 @@
 http\://www.lankio.com/schema/myns=com.lankio.learning.xml.MyNamespaceHandler
 http\://www.lankio.com/schema/component=com.lankio.learning.xml.MyComponentNamespaceHandler
+http\://www.lankio.com/schema/jcache=com.lankio.learning.xml.JCacheNamespaceHandler

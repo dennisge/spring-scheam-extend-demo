@@ -1,23 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xmlns:foo="http://www.lankio.com/schema/component"
+	xmlns:jcache="http://www.lankio.com/schema/jcache"
 	xsi:schemaLocation="
 http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
-
-http://www.lankio.com/schema/component http://www.lankio.com/schema/component/mycomponent.xsd
-
+http://www.lankio.com/schema/jcache http://www.lankio.com/schema/jcache/jcache.xsd
 ">
 
 
+	<bean id="hello"
+		class="com.lankio.learning.service.HelloService"
+		jcache:cache-name="checking.account">
+		<!-- other dependencies here... -->
+	</bean>
 
-	<foo:component id="bionic-family" name="Bionic-1">
-		<foo:component name="Sport-1" />
-		<foo:component name="Rock-1" />
-		<foo:component name="张三" />
-	</foo:component>
-
-
-	
 
 </beans>
