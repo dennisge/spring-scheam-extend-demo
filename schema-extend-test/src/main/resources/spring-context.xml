@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:myns="http://www.lankio.com/schema/myns"
+
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+http://www.lankio.com/schema/myns http://www.lankio.com/schema/myns/myns.xsd
+
+">
+
+	<!-- as a top-level bean -->
+	<myns:dateformat id="defaultDateFormat"
+		pattern="yyyy-MM-dd HH:mm:sss" lenient="true" />
+
+	<bean id="simpleDateContainer" class="com.lankio.learning.model.SimpleDateContainer">
+	
+		  <property name="dateFormat">
+		  	<myns:dateformat pattern="MM/dd/yyyy HH:mm"/>
+		  </property>
+	
+	</bean>
+
+
+</beans>
